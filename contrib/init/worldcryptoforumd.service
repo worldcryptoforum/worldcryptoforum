@@ -1,0 +1,26 @@
+[Unit]
+Description=WCF's distributed currency daemon
+After=network.target
+
+[Service]
+User=worldcryptoforum
+Group=worldcryptoforum
+
+Type=forking
+PIDFile=/var/lib/worldcryptoforumd/worldcryptoforumd.pid
+
+ExecStart=/usr/bin/worldcryptoforumd -daemon -pid=/var/lib/worldcryptoforumd/worldcryptoforumd.pid \
+          -conf=/etc/worldcryptoforum/worldcryptoforum.conf -datadir=/var/lib/worldcryptoforumd
+
+ExecStop=-/usr/bin/worldcryptoforum-cli -conf=/etc/worldcryptoforum/worldcryptoforum.conf \
+         -datadir=/var/lib/worldcryptoforumd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

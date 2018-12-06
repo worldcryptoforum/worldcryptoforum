@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=WCF
+Comment=WCF P2P Cryptocurrency
+Comment[fr]=WCF, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=WCF, eşten eşe kriptografik sanal para birimi
+Exec=worldcryptoforum-qt %u
+Terminal=false
+Type=Application
+Icon=worldcryptoforum128
+MimeType=x-scheme-handler/worldcryptoforum;
+Categories=Office;Finance;

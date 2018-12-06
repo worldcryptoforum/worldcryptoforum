@@ -1,0 +1,36 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/worldcryptoforum_bg.qm</file>
+        <file alias="ca">locale/worldcryptoforum_ca.qm</file>
+        <file alias="cs">locale/worldcryptoforum_cs.qm</file>
+        <file alias="da">locale/worldcryptoforum_da.qm</file>
+        <file alias="de">locale/worldcryptoforum_de.qm</file>
+        <file alias="en">locale/worldcryptoforum_en.qm</file>
+        <file alias="en_US">locale/worldcryptoforum_en_US.qm</file>
+        <file alias="eo">locale/worldcryptoforum_eo.qm</file>
+        <file alias="es">locale/worldcryptoforum_es.qm</file>
+        <file alias="es_ES">locale/worldcryptoforum_es_ES.qm</file>
+        <file alias="fi">locale/worldcryptoforum_fi.qm</file>
+        <file alias="fr_FR">locale/worldcryptoforum_fr_FR.qm</file>
+        <file alias="hi_IN">locale/worldcryptoforum_hi_IN.qm</file>
+        <file alias="hr">locale/worldcryptoforum_hr.qm</file>
+        <file alias="hr_HR">locale/worldcryptoforum_hr_HR.qm</file>
+        <file alias="it">locale/worldcryptoforum_it.qm</file>
+        <file alias="ja">locale/worldcryptoforum_ja.qm</file>
+        <file alias="ko_KR">locale/worldcryptoforum_ko_KR.qm</file>
+        <file alias="lt_LT">locale/worldcryptoforum_lt_LT.qm</file>
+        <file alias="nl">locale/worldcryptoforum_nl.qm</file>
+        <file alias="pl">locale/worldcryptoforum_pl.qm</file>
+        <file alias="pt">locale/worldcryptoforum_pt.qm</file>
+        <file alias="pt_BR">locale/worldcryptoforum_pt_BR.qm</file>
+        <file alias="ro_RO">locale/worldcryptoforum_ro_RO.qm</file>
+        <file alias="ru">locale/worldcryptoforum_ru.qm</file>
+        <file alias="sk">locale/worldcryptoforum_sk.qm</file>
+        <file alias="sv">locale/worldcryptoforum_sv.qm</file>
+        <file alias="tr">locale/worldcryptoforum_tr.qm</file>
+        <file alias="uk">locale/worldcryptoforum_uk.qm</file>
+        <file alias="vi">locale/worldcryptoforum_vi.qm</file>
+        <file alias="zh_CN">locale/worldcryptoforum_zh_CN.qm</file>
+        <file alias="zh_TW">locale/worldcryptoforum_zh_TW.qm</file>
+    </qresource>
+</RCC>

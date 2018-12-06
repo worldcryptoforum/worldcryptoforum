@@ -1,0 +1,26 @@
+# /etc/conf.d/worldcryptoforumd: config file for /etc/init.d/worldcryptoforumd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/worldcryptoforum/worldcryptoforum.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/worldcryptoforumd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/worldcryptoforumd.pid"
+
+# Where to write worldcryptoforumd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/worldcryptoforumd"
+
+# User and group to own worldcryptoforumd process
+#BITCOIND_USER="worldcryptoforum"
+#BITCOIND_GROUP="worldcryptoforum"
+
+# Path to worldcryptoforumd executable
+#BITCOIND_BIN="/usr/bin/worldcryptoforumd"
+
+# Nice value to run worldcryptoforumd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
