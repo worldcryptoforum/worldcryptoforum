@@ -12,30 +12,30 @@
  * network protocol versioning
  */
 
-static const int PROTOCOL_VERSION = 22000;
+static const int PROTOCOL_VERSION = 23000;
 
 //! initial proto version, to be increased after version/verack negotiation
-static const int INIT_PROTO_VERSION = 301;
+static const int INIT_PROTO_VERSION = 302;
 
 //! In this version, 'getheaders' was introduced.
-static const int GETHEADERS_VERSION = 40440;
+static const int GETHEADERS_VERSION = 40450;
 
 //! disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION_ENFORCEMENT = 22000;
+static const int MIN_PEER_PROTO_VERSION_ENFORCEMENT = 23000;
 
 //! nTime field added to CAddress, starting with this version;
 //! if possible, avoid requesting addresses nodes older than this
-static const int CADDR_TIME_VERSION = 47501;
+static const int CADDR_TIME_VERSION = 47502;
 
 //! only request blocks from nodes outside this range of versions
 static const int NOBLKS_VERSION_START = 21000;
-static const int NOBLKS_VERSION_END = 21500;
+static const int NOBLKS_VERSION_END = 21600;
 
 //! BIP 0031, pong message, is enabled for all versions AFTER this one
-static const int BIP0031_VERSION = 13500;
+static const int BIP0031_VERSION = 13600;
 
 //! "mempool" command, enhanced "getdata" behavior starts with this version
-static const int MEMPOOL_GD_VERSION = 13505;
+static const int MEMPOOL_GD_VERSION = 13605;
 
 //! "filter*" commands are disabled without NODE_BLOOM after and including this version
 static const int NO_BLOOM_VERSION = 13701;

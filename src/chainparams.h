@@ -73,13 +73,12 @@ public:
     int64_t TargetTimespan() const { return nTargetTimespan; }
     int64_t TargetSpacing() const { return nTargetSpacing; }
     int64_t Interval() const { return nTargetTimespan / nTargetSpacing; }
-    int LAST_POW_BLOCK() const { return nLastPOWBlock; }
+
     int COINBASE_MATURITY() const { return nMaturity; }
     int ModifierUpgradeBlock() const { return nModifierUpdateBlock; }
     CAmount MaxMoneyOut() const { return nMaxMoneyOut; }
     /** The masternode count that we will allow the see-saw reward payments to be off by */
     int MasternodeCountDrift() const { return nMasternodeCountDrift; }
-	int MasternodeColleteralLimxDev() const { return nMasternodeColleteralLimxDev; }
     /** Make miner stop after a block is found. In RPC, don't return until nGenProcLimit blocks are generated */
     bool MineBlocksOnDemand() const { return fMineBlocksOnDemand; }
     /** In the future use NetworkIDString() for RPC fields */
@@ -104,7 +103,6 @@ protected:
     //! Raw pub key bytes for the broadcast alert signing key.
     std::vector<unsigned char> vAlertPubKey;
     int nDefaultPort;
-	int nMasternodeColleteralLimxDev;
     uint256 bnProofOfWorkLimit;
     int nMaxReorganizationDepth;
     int nSubsidyHalvingInterval;
@@ -113,7 +111,6 @@ protected:
     int nToCheckBlockUpgradeMajority;
     int64_t nTargetTimespan;
     int64_t nTargetSpacing;
-    int nLastPOWBlock;
     int nMasternodeCountDrift;
     int nMaturity;
 	int nMaturityMAX;
@@ -160,6 +157,25 @@ public:
     virtual void setSkipProofOfWorkCheck(bool aSkipProofOfWorkCheck) = 0;
 };
 
+
+inline int64_t MasternodeColleteralLimxDev(int nHeight) { 
+
+if(nHeight <= 56000){return 1000;}
+else if(nHeight > 56000 && nHeight <= 76000){return 3000;}
+else if(nHeight > 76000 && nHeight <= 90000) {return 5000;}
+else if(nHeight > 90000 && nHeight <= 110000) {return 7500;}
+else if(nHeight > 110000 && nHeight <= 130000) {return 10000;}
+else if(nHeight > 130000 && nHeight <= 150000) {return 15000;}
+else if(nHeight > 150000 && nHeight <= 160000) {return 30000;}
+else if(nHeight > 160000 && nHeight <= 200000) {return 45000;}
+else if(nHeight > 200000) {return 100000;}
+}
+
+inline int64_t LAST_POW_BLOCK(int nHeight) {
+
+if(nHeight <= 52699){return 300;}
+else if(nHeight > 52699){return 52800;}
+}
 
 /**
  * Return the currently selected parameters. This won't change after app startup

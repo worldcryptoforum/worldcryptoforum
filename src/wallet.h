@@ -69,7 +69,7 @@ enum WalletFeature {
     FEATURE_WALLETCRYPT = 33300, // wallet encryption
     FEATURE_COMPRPUBKEY = 11100, // compressed public keys
 
-    FEATURE_LATEST = 11000
+    FEATURE_LATEST = 12000
 };
 
 enum AvailableCoinsType {

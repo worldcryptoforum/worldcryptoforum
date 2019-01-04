@@ -1619,16 +1619,44 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = 1000 * COIN;
 	} else if (nHeight > 300 && nHeight <= 30000) {
 		nSubsidy = 0.5 * COIN;
-	} else if (nHeight > 30000 && nHeight <= 300000) {
+	} else if (nHeight == 52701) {
+		nSubsidy = 1200000 * COIN;
+	} else if (nHeight > 30000 && nHeight <= 56000) {
 		nSubsidy = 14 * COIN;
-	} else if (nHeight > 300000 && nHeight <= 600000) {
-		nSubsidy = 11 * COIN;
-	} else if (nHeight > 600000 && nHeight <= 800000) {
-		nSubsidy = 8 * COIN;
-	} else if (nHeight > 800000 && nHeight <= 3000000) {
-		nSubsidy = 6 * COIN;
-	} else if (nHeight > 3000000) {
-		nSubsidy = 5 * COIN;
+	} else if (nHeight > 56000 && nHeight <= 60000) {
+		nSubsidy = 70 * COIN;
+	} else if (nHeight > 60000 && nHeight <= 67000) {
+		nSubsidy = 80 * COIN;
+	} else if (nHeight > 67000 && nHeight <= 76000) {
+		nSubsidy = 90 * COIN;
+	} else if (nHeight > 76000 && nHeight <= 83000) {
+		nSubsidy = 100 * COIN;
+	} else if (nHeight > 83000 && nHeight <= 90000) {
+		nSubsidy = 110 * COIN;
+	} else if (nHeight > 90000 && nHeight <= 100000) {
+		nSubsidy = 120 * COIN;
+	} else if (nHeight > 100000 && nHeight <= 110000) {
+		nSubsidy = 130 * COIN;
+	} else if (nHeight > 110000 && nHeight <= 120000) {
+		nSubsidy = 150 * COIN;
+	} else if (nHeight > 120000 && nHeight <= 130000) {
+		nSubsidy = 160 * COIN;
+	} else if (nHeight > 130000 && nHeight <= 140000) {
+		nSubsidy = 300 * COIN;
+	} else if (nHeight > 140000 && nHeight <= 150000) {
+		nSubsidy = 320 * COIN;
+	} else if (nHeight > 150000 && nHeight <= 160000) {
+		nSubsidy = 310 * COIN;
+	} else if (nHeight > 160000 && nHeight <= 170000) {
+		nSubsidy = 300 * COIN;
+	} else if (nHeight > 170000 && nHeight <= 180000) {
+		nSubsidy = 250 * COIN;
+	} else if (nHeight > 180000 && nHeight <= 200000) {
+		nSubsidy = 200 * COIN;
+	} else if (nHeight > 200000 && nHeight <= 500000) {
+		nSubsidy = 100 * COIN;
+	} else if (nHeight > 500000) {
+		nSubsidy = 50 * COIN;
 	}
     return nSubsidy;
 }
@@ -2054,11 +2082,11 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
         return true;
     }
 
-    if (pindex->nHeight <= Params().LAST_POW_BLOCK() && block.IsProofOfStake())
+    if (pindex->nHeight <= LAST_POW_BLOCK(chainActive.Height()) && block.IsProofOfStake())
         return state.DoS(100, error("ConnectBlock() : PoS period not active"),
             REJECT_INVALID, "PoS-early");
 
-    if (pindex->nHeight > Params().LAST_POW_BLOCK() && block.IsProofOfWork())
+    if (pindex->nHeight > LAST_POW_BLOCK(chainActive.Height()) && block.IsProofOfWork())
         return state.DoS(100, error("ConnectBlock() : PoW period ended"),
             REJECT_INVALID, "PoW-ended");
 
@@ -3522,7 +3550,7 @@ bool TestBlockValidity(CValidationState& state, const CBlock& block, CBlockIndex
     if (!CheckBlock(block, state, fCheckPOW, fCheckMerkleRoot))
         return false;
 	///AAAA
-	if( pindexPrev->nHeight +1 > Params().LAST_POW_BLOCK()){
+	if( pindexPrev->nHeight +1 > LAST_POW_BLOCK(chainActive.Height())){
     if (!ContextualCheckBlock(block, state, pindexPrev))
         return false;
 	}

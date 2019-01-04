@@ -118,12 +118,10 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60;
         nTargetSpacing = 1 * 60;
-        nLastPOWBlock = 300;
         nMaturity = 120;
         nMasternodeCountDrift = 20;
-	nMasternodeColleteralLimxDev = 1000;
         nModifierUpdateBlock = 1;
-        nMaxMoneyOut = 30000000 * COIN;
+        nMaxMoneyOut = 100000000 * COIN;
         genesis = CreateGenesisBlock(1542950925, 469310, 0x1e0ffff0, 1, 0 * COIN);
 
 

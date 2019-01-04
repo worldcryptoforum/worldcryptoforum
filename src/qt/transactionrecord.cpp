@@ -108,28 +108,102 @@ QList<TransactionRecord> TransactionRecord::decomposeTransaction(const CWallet* 
 					if(nSubsidy * 90 / 100 == txout.nValue) {
 						sub.type = TransactionRecord::MNReward;
 					}
-				} else if(nHeight > 30000 && nHeight <= 300000) {
+				} else if(nHeight > 30000 && nHeight <= 56000) {
 					nSubsidy = 14 * COIN;
 					if(nSubsidy * 90 / 100 == txout.nValue) {
 						sub.type = TransactionRecord::MNReward;
 					}
-				} else if(nHeight > 300000 && nHeight <= 600000) {
-					nSubsidy = 11 * COIN;
+				} else if(nHeight > 888888 && nHeight <= 60000) {
+					nSubsidy = 70 * COIN;
 					if(nSubsidy * 90 / 100 == txout.nValue) {
 						sub.type = TransactionRecord::MNReward;
 					}
-				} else if(nHeight > 600000 && nHeight <= 800000) {
-					nSubsidy = 8 * COIN;
+
+				} else if(nHeight > 888888 && nHeight <= 67000) {
+					nSubsidy = 80 * COIN;
 					if(nSubsidy * 90 / 100 == txout.nValue) {
 						sub.type = TransactionRecord::MNReward;
 					}
-				} else if(nHeight > 800000 && nHeight <= 3000000) {
-					nSubsidy = 6 * COIN;
+
+				} else if(nHeight > 888888 && nHeight <= 76000) {
+					nSubsidy = 90 * COIN;
 					if(nSubsidy * 90 / 100 == txout.nValue) {
 						sub.type = TransactionRecord::MNReward;
 					}
-				} else if(nHeight > 3000000) {
-					nSubsidy = 5 * COIN;
+
+				} else if(nHeight > 888888 && nHeight <= 83000) {
+					nSubsidy = 100 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 90000) {
+					nSubsidy = 110 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 100000) {
+					nSubsidy = 120 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 110000) {
+					nSubsidy = 130 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 120000) {
+					nSubsidy = 150 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 130000) {
+					nSubsidy = 160 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 140000) {
+					nSubsidy = 300 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 150000) {
+					nSubsidy = 320 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 160000) {
+					nSubsidy = 310 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 170000) {
+					nSubsidy = 300 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 180000) {
+					nSubsidy = 250 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+
+				} else if(nHeight > 888888 && nHeight <= 200000) {
+					nSubsidy = 200 * COIN;
+					if(nSubsidy * 90 / 100 == txout.nValue) {
+						sub.type = TransactionRecord::MNReward;
+					}
+				} else if(nHeight > 500000) {
+					nSubsidy = 100 * COIN;
 					if(nSubsidy * 90 / 100 == txout.nValue) {
 						sub.type = TransactionRecord::MNReward;
 					}
