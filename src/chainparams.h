@@ -166,15 +166,16 @@ else if(nHeight > 76000 && nHeight <= 90000) {return 5000;}
 else if(nHeight > 90000 && nHeight <= 110000) {return 7500;}
 else if(nHeight > 110000 && nHeight <= 130000) {return 10000;}
 else if(nHeight > 130000 && nHeight <= 150000) {return 15000;}
-else if(nHeight > 150000 && nHeight <= 160000) {return 30000;}
-else if(nHeight > 160000 && nHeight <= 200000) {return 45000;}
+else if(nHeight > 150000 && nHeight <= 170000) {return 30000;}
+else if(nHeight > 170000 && nHeight <= 200000) {return 45000;}
 else if(nHeight > 200000) {return 100000;}
 }
 
 inline int64_t LAST_POW_BLOCK(int nHeight) {
 
 if(nHeight <= 52699){return 300;}
-else if(nHeight > 52699){return 52800;}
+else if(nHeight > 52699 && nHeight <= 160000){return 52800;}
+else if(nHeight > 160000){return 160100;}
 }
 
 /**
